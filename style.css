@@ -38,7 +38,7 @@ nav a {
 main {
   margin-top: 100px;
   display: grid;
-  gap: 40px;
+  gap: 80px 54px;
   grid-template-columns: 2fr 3fr;
 }
 
