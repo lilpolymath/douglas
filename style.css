@@ -5,12 +5,15 @@
 }
 
 body {
-  color: white;
-  background-color: #20229c;
-  background-color: rgb(10, 25, 47);
-  background-color: #0B0B45;
+  /* color: #ededed; */
+  color: black;
+  font-size: 16px;
+  line-height: 1.5;
+  font-family: 'Noto Sans', sans-serif;
+  min-height: 100vh;
+  background-color: #d3d3d3;
   background-size: 40px 40px;
-  background-image: radial-gradient(circle, white 1px, rgba(0, 0, 0, 0) 1px);
+  background-image: radial-gradient(circle, #0e0335 1px, rgba(0, 0, 0, 0) 1px);
 }
 
 .container {
@@ -18,4 +21,110 @@ body {
   padding: 1rem;
   max-width: 900px;
   margin: 2rem auto;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+nav a {
+  color: black;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-family: 'Rubik Wet Paint', cursive;
+}
+
+main {
+  margin-top: 100px;
+  display: grid;
+  gap: 40px;
+  grid-template-columns: 2fr 3fr;
+}
+
+@media screen and (max-width: 600px) {
+  main {
+    grid-template-columns: 1fr;
+  }
+}
+
+.image-container {
+  position: relative;
+  transition: all 0.3s;
+  filter: drop-shadow(3px 3px 20px grey) grayscale(1);
+}
+
+.image-container img {
+  width: 100%;
+  object-fit: cover;
+  height: auto;
+  border-radius: 4px;
+}
+
+.image-container:hover {
+  filter: drop-shadow(3px 3px 20px grey) grayscale(0);
+}
+
+.hover {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0.625rem;
+  left: 0.625rem;
+  z-index: -1;
+}
+
+.bio-content {
+  margin-top: 2.5rem;
+}
+
+.bio-content h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  font-family: 'Rubik Wet Paint', cursive;
+}
+
+.bio-content p {
+  font-size: 16px;
+  font-family: 'Raleway';
+}
+
+.bio-content .tag {
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.content>*+* {
+  margin-top: 3rem;
+}
+
+.content>section header {
+  font-size: 24px;
+  margin-bottom: 16px;
+  text-transform: uppercase;
+  font-family: 'Rubik Wet Paint', cursive;
+}
+
+.content-list>*+* {
+  margin-top: 2rem;
+}
+
+.content-list-item {
+  border-radius: 4px;
+  background-color: #d3d3d3;
+  padding: 1.75rem 1rem;
+  box-shadow: 0px 20px 20px 5px #c3c3c3;
+}
+
+.content-list-item *+* {
+  margin-top: 1rem;
+}
+
+.content-list-item p {
+  font-size: 16px;
+  font-family: 'Raleway';
 }
