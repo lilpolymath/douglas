@@ -10,17 +10,23 @@ body {
   font-size: 16px;
   line-height: 1.5;
   font-family: 'Noto Sans', sans-serif;
-  min-height: 100vh;
   background-color: #d3d3d3;
   background-size: 40px 40px;
+  overflow: hidden;
   background-image: radial-gradient(circle, #0e0335 1px, rgba(0, 0, 0, 0) 1px);
+}
+
+@media screen and (max-width: 600px) {
+  body {
+    overflow: auto;
+  }
 }
 
 .container {
   width: 100%;
-  padding: 1rem;
+  padding: 3rem 1rem;
   max-width: 900px;
-  margin: 2rem auto;
+  margin: 0 auto;
 }
 
 nav {
@@ -36,15 +42,17 @@ nav a {
 }
 
 main {
-  margin-top: 100px;
+  padding-top: 100px;
   display: grid;
   gap: 80px 54px;
+  height: calc(100vh - 100px);
   grid-template-columns: 2fr 3fr;
 }
 
 @media screen and (max-width: 600px) {
   main {
     grid-template-columns: 1fr;
+    height: auto;
   }
 }
 
@@ -62,7 +70,7 @@ main {
 }
 
 .image-container:hover {
-  filter: drop-shadow(3px 3px 20px grey) grayscale(0);
+  /* filter: drop-shadow(3px 3px 20px grey) grayscale(0); */
 }
 
 .hover {
@@ -102,8 +110,18 @@ main {
   margin-bottom: 1rem;
 }
 
+.content {
+  height: 100%;
+  overflow-y: auto;
+  position: relative;
+}
+
+.content::-webkit-scrollbar {
+  width: 0px;
+}
+
 .content header {
-  font-size: 24px;
+  font-size: 1.375rem;
   padding-left: .75rem;
   text-transform: uppercase;
   font-family: 'Rubik Wet Paint', cursive;
@@ -114,8 +132,12 @@ main {
   padding: 1rem;
 }
 
+.content-list-item h4 {
+  font-size: 1rem;
+}
+
 .content-list-item *+* {
-  margin-top: 1rem;
+  margin-top: 0.5rem;
 }
 
 .content-list-item p {
