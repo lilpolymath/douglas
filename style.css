@@ -8,10 +8,11 @@ body {
   color: black;
   font-size: 16px;
   line-height: 1.5;
-  font-family: 'Noto Sans', sans-serif;
-  background-color: #d3d3d3;
-  background-size: 40px 40px;
   overflow: hidden;
+  background-color: #d3d3d3;
+  font-family: 'Noto Sans', sans-serif;
+  background-attachment: fixed;
+  background-size: 40px 40px;
   background-image: radial-gradient(circle, #0e0335 1px, rgba(0, 0, 0, 0) 1px);
 }
 
