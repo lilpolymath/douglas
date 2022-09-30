@@ -5,18 +5,22 @@
 }
 
 body {
-  color: black;
+  color: white;
   font-size: 16px;
-  line-height: 1.5;
+  line-height: 1.6;
   overflow: hidden;
-  background-color: #d3d3d3;
-  font-family: 'Noto Sans', sans-serif;
+  background-color: #14274E;
   background-attachment: fixed;
   background-size: 40px 40px;
-  background-image: radial-gradient(circle, #0e0335 1px, rgba(0, 0, 0, 0) 1px);
 }
 
-@media screen and (max-width: 600px) {
+a {
+  color: #FF4C29;
+  font-weight: bold;
+  font-family: 'Noto Sans', sans-serif;
+}
+
+@media screen and (max-width: 1280px) {
   body {
     overflow: auto;
   }
@@ -35,17 +39,18 @@ nav {
 }
 
 nav a {
-  color: black;
+  font-size: 20px;
+  color: white;
   text-transform: uppercase;
   text-decoration: none;
   font-family: 'Rubik Wet Paint', cursive;
 }
 
 main {
-  padding-top: 100px;
+  padding-top: 80px;
   display: grid;
   gap: 80px 54px;
-  height: calc(100vh - 100px);
+  height: calc(100vh - 80px);
   grid-template-columns: 2fr 3fr;
 }
 
@@ -59,13 +64,14 @@ main {
 .image-container {
   position: relative;
   transition: all 0.3s;
-  filter: drop-shadow(3px 3px 20px grey) grayscale(1);
+  filter: drop-shadow(3px 3px 20px black) grayscale(0);
 }
 
 .image-container img {
   width: 100%;
   object-fit: cover;
   height: auto;
+  max-height: 400px;
   border-radius: 4px;
 }
 
@@ -110,7 +116,7 @@ main {
 
 .bio-content .tag {
   text-transform: uppercase;
-  font-size: 12px;
+  font-size: 14px;
   font-weight: bold;
   margin-bottom: 1rem;
 }
@@ -139,6 +145,7 @@ main {
 
 .content-list-item h4 {
   font-size: 1rem;
+  font-family: 'Noto Sans', sans-serif;
 }
 
 .content-list-item *+* {
@@ -148,4 +155,8 @@ main {
 .content-list-item p {
   font-size: 16px;
   font-family: 'Raleway';
+}
+
+.content-list-item p+p {
+  margin-top: 20px;
 }
